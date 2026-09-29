@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Astronomy for Kids</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="nav">
+  <a href="#top" class="logo">Astronomy for Kids</a>
+  <nav>
+    <a href="#planets">Planets</a>
+    <a href="#moon">Moon</a>
+    <a href="#glossary">Definitions</a>
+    <a href="#pdf">Read the PDF</a>
+  </nav>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Astronomy for Kids</h1>
+      <p>Journey through the Solar System, meet the 8 planets, and learn what stars, galaxies and black holes really are.</p>
+      <a class="btn" href="#planets">Start the journey</a>
+    </div>
+    <div class="system" id="system" aria-hidden="true"><div class="sun"></div></div>
+  </section>
+
+  <section id="planets" class="block">
+    <h2>The 8 Planets</h2>
+    <p class="lead">The Solar System is the Sun and everything that orbits around it. Pick a planet.</p>
+    <div class="picker" id="picker" role="tablist"></div>
+    <div class="stage">
+      <div class="planet-wrap" id="planetWrap"><div class="planet" id="planet"></div></div>
+      <div class="info" id="info" aria-live="polite">
+        <h3 id="pName"></h3>
+        <p class="tag" id="pTag"></p>
+        <ul id="pFacts"></ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="moon" class="block alt">
+    <h2>The Phases of the Moon</h2>
+    <p class="lead">The Moon is Earth's natural satellite. It shines because it reflects the Sun's light.</p>
+    <div class="phases" id="phases"></div>
+    <p class="phase-text" id="phaseText" aria-live="polite"></p>
+  </section>
+
+  <section id="glossary" class="block">
+    <h2>Definitions</h2>
+    <input id="search" type="search" placeholder="Search a word, like galaxy" aria-label="Search definitions">
+    <div class="terms" id="terms"></div>
+    <p class="empty" id="empty" hidden>No matching word. Try another one.</p>
+  </section>
+
+  <section id="pdf" class="block alt">
+    <h2>Read the Document</h2>
+    <p class="lead">The full book, right here on the page.</p>
+    <iframe class="viewer" src="pdf/astronomy.pdf#view=FitH" title="Astronomy for Kids, part 1"></iframe>
+    <p><a class="btn" href="pdf/astronomy.pdf" download>Download the PDF</a></p>
+  </section>
+</main>
+
+<footer>Astronomy for Kids, part 1, by Meddah Safaâ</footer>
+<script src="script.js"></script>
+</body>
+</html>
